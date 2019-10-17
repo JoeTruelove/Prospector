@@ -293,6 +293,11 @@ public class Prospector : MonoBehaviour {
         {
             gameOverText = go.GetComponent<Text>();
         }
+        go = GameObject.Find("RoundResult");
+        if (go != null)
+        {
+            roundResultText = go.GetComponent<Text>();
+        }
         ShowResultsUI(false);
     }
 
