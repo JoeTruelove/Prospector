@@ -18,15 +18,7 @@ public class Card : MonoBehaviour {
     public SpriteRenderer[] spriteRenderers;
 
 
-	public bool faceUp {
-		get {
-			return (!back.activeSelf);
-		}
-
-		set {
-			back.SetActive(!value);
-		}
-	}
+	
 
 
 	// Use this for initialization
@@ -76,6 +68,24 @@ public class Card : MonoBehaviour {
                     break;
             }
         }
+    }
+
+    public bool faceUp
+    {
+        get
+        {
+            return (!back.activeSelf);
+        }
+
+        set
+        {
+            back.SetActive(!value);
+        }
+    }
+
+    virtual public void OnMouseUpAsButton()
+    {
+        print(name);
     }
 
 } // class Card
